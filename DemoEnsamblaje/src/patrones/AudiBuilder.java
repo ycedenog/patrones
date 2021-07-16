@@ -9,6 +9,28 @@ package patrones;
  *
  * @author Victor
  */
-public class AudiBuilder {
-    
+public class AudiBuilder extends VehiculoBuilder{
+    public void DefinirVehiculo() {
+        v = new Vehiculo();
+        v.marca = "Audi";
+        v.modelo = "A3 Sportback";
+    }
+
+    public void ConstruirHabitaculo() {
+        v.tipoCarroceria = new Carroceria();
+        v.tipoCarroceria.tipoCarroceria = "monovolumen";
+        v.color = "plata cromado";
+        v.tipoCarroceria.habitaculoReforzado = true;
+        v.tipoCarroceria.material = "fibra de carbono";
+        
+        
+    }
+
+    public void ConstuirMotor() {
+        v.motor = new MotorDiesel();
+    }
+
+    public void DefinirExtras() {
+        v.direccionAsistida = true;
+    }
 }

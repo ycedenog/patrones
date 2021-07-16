@@ -12,13 +12,16 @@ package patrones;
 public class CitroenBuilder extends VehiculoBuilder{
 
     public void DefinirVehiculo() {
-        Vehiculo v = new Vehiculo();
+        v = new Vehiculo();
         v.marca = "Citroen";
         v.modelo = "Xsara Picasso";
     }
 
     public void ConstruirHabitaculo() {
-        Carroceria tipoCarroceria = new Carroceria();
+        v.tipoCarroceria = new Carroceria();
+        v.tipoCarroceria.tipoCarroceria = "monovolumen";
+        v.color = "negro";
+        
         
     }
 
