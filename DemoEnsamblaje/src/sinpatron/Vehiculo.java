@@ -5,11 +5,13 @@
  */
 package sinpatron;
 
+import patrones.VehiculoBase;
+
 /**
  *
  * @author david_000
  */
-public class Vehiculo {
+public class Vehiculo implements VehiculoBase{
    public String color;
    public boolean direccionAsistida;
    public String marca;

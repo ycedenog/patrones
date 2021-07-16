@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package patrones;
+import sinpatron.Vehiculo;
+import sinpatron.Carroceria;
+import sinpatron.MotorDiesel;
 
 /**
  *

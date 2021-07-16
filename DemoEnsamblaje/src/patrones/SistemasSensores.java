@@ -9,6 +9,14 @@ package patrones;
  *
  * @author Victor
  */
-public class SistemasSensores {
+public class SistemasSensores extends VehiculoDecorator{
     
+    public SistemasSensores(VehiculoBase wrappe) {
+        super(wrappe);
+    }
+    
+    @Override
+    public String getPrestaciones(){
+        return super.getPrestaciones() + "Añadiendo Sistema de sensores\n";
+    }
 }

@@ -9,6 +9,14 @@ package patrones;
  *
  * @author Victor
  */
-public class VehiculoDecorator {
+public class VehiculoDecorator implements VehiculoBase{
+    protected VehiculoBase wrappe;
+
+    public VehiculoDecorator(VehiculoBase wrappe) {
+        this.wrappe = wrappe;
+    }
     
+    public String getPrestaciones() {
+        return this.wrappe.getPrestaciones();
+    }
 }

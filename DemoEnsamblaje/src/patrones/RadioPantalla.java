@@ -9,6 +9,14 @@ package patrones;
  *
  * @author Victor
  */
-public class RadioPantalla {
+public class RadioPantalla extends VehiculoDecorator{
     
+    public RadioPantalla(VehiculoBase wrappe) {
+        super(wrappe);
+    }
+    
+    @Override
+    public String getPrestaciones(){
+        return super.getPrestaciones() + "Añadiendo Radio de pantalla\n";
+    }
 }

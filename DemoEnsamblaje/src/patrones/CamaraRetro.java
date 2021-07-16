@@ -9,6 +9,15 @@ package patrones;
  *
  * @author Victor
  */
-public class CamaraRetro {
+public class CamaraRetro extends VehiculoDecorator{
+    
+    public CamaraRetro(VehiculoBase wrappe) {
+        super(wrappe);
+    }
+    
+    @Override
+    public String getPrestaciones(){
+        return super.getPrestaciones() + "Añadiendo Cámara de retro\n";
+    }
     
 }

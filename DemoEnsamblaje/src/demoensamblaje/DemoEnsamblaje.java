@@ -5,6 +5,13 @@
  */
 package demoensamblaje;
 
+import patrones.AudiBuilder;
+import patrones.CamaraRetro;
+import patrones.CitroenBuilder;
+import patrones.RadioPantalla;
+import patrones.SistemasSensores;
+import patrones.VehiculoBase;
+import patrones.VehiculoDirector;
 import sinpatron.*;
 
 /**
@@ -17,6 +24,7 @@ public class DemoEnsamblaje {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         //Definir vehiculo
         Vehiculo v1 = new Vehiculo();
         v1.marca = "Citroen";
@@ -69,6 +77,11 @@ public class DemoEnsamblaje {
         //Debería agregar estos accesorios como parte de las prestaciones del vehiculo
                 
         //Mostrar prestaciones actualizadas del vehiculo
+        System.out.println("Primero actualizado");
+        VehiculoDirector directorAudi = new VehiculoDirector(new AudiBuilder());
+        directorAudi.construirVehiculo();
+        VehiculoBase audi = new RadioPantalla(new SistemasSensores(directorAudi.getVehiculo()));
+        System.out.println(audi.getPrestaciones());
         
         //--------------------------------------------------
         
@@ -77,6 +90,11 @@ public class DemoEnsamblaje {
         
         
         //Mostrar prestaciones actualizadas del vehiculo
+        System.out.println("Segundo actualizado");
+        VehiculoDirector directorCitroen = new VehiculoDirector(new CitroenBuilder());
+        directorCitroen.construirVehiculo();;
+        VehiculoBase citroe = new CamaraRetro(directorCitroen.getVehiculo());
+        System.out.println(citroe.getPrestaciones());
     }
     
 }

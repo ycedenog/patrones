@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package patrones;
+import sinpatron.Vehiculo;
+import sinpatron.Carroceria;
+import sinpatron.MotorDiesel;
 
 /**
  *
@@ -21,16 +24,18 @@ public class CitroenBuilder extends VehiculoBuilder{
         v.tipoCarroceria = new Carroceria();
         v.tipoCarroceria.tipoCarroceria = "monovolumen";
         v.color = "negro";
+        v.tipoCarroceria.habitaculoReforzado = false;
+        v.tipoCarroceria.material = "acero";
         
         
     }
 
     public void ConstuirMotor() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        v.motor = new MotorDiesel();
     }
 
     public void DefinirExtras() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        v.direccionAsistida = false;
     }
     
 }

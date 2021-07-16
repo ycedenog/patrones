@@ -10,5 +10,5 @@ package patrones;
  * @author Victor
  */
 public interface VehiculoBase {
-    
+    public String getPrestaciones();
 }
