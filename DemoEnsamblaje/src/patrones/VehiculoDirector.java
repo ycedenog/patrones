@@ -10,5 +10,19 @@ package patrones;
  * @author Victor
  */
 public class VehiculoDirector {
+    protected VehiculoBuilder builder;
+
+    public VehiculoDirector(VehiculoBuilder builder) {
+        this.builder = builder;
+    }
+    public void construirVehiculo(){
+        builder.DefinirVehiculo();
+        builder.ConstruirHabitaculo();
+        builder.ConstuirMotor();
+        builder.
+    }
     
+    public Vehiculo getVehiculo(){
+        return builder.getVehiculo();
+    }
 }
