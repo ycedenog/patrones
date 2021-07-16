@@ -16,26 +16,24 @@ public class CitroenBuilder extends VehiculoBuilder{
 
     public void DefinirVehiculo() {
         v = new Vehiculo();
-        v.marca = "Citroen";
-        v.modelo = "Xsara Picasso";
+        v.setMarca("Citroen");
+        v.setModelo("Xsara Picasso");
     }
 
     public void ConstruirHabitaculo() {
-        v.tipoCarroceria = new Carroceria();
-        v.tipoCarroceria.tipoCarroceria = "monovolumen";
-        v.color = "negro";
-        v.tipoCarroceria.habitaculoReforzado = false;
-        v.tipoCarroceria.material = "acero";
-        
-        
+        v.setTipoCarroceria( new Carroceria());
+        v.getTipoCarroceria().setTipoCarroceria("monovolumen");
+        v.setColor("negro");
+        v.getTipoCarroceria().setHabitaculoReforzado(false);
+        v.getTipoCarroceria().setMaterial("acero") ;     
     }
 
     public void ConstuirMotor() {
-        v.motor = new MotorDiesel();
+        v.setMotor(new MotorDiesel());
     }
 
     public void DefinirExtras() {
-        v.direccionAsistida = false;
+        v.setDireccionAsistida(false);
     }
     
 }

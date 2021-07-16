@@ -15,25 +15,23 @@ import sinpatron.MotorDiesel;
 public class AudiBuilder extends VehiculoBuilder{
     public void DefinirVehiculo() {
         v = new Vehiculo();
-        v.marca = "Audi";
-        v.modelo = "A3 Sportback";
+         v.setMarca("Audi");
+        v.setModelo("A3 Sportback");
     }
 
     public void ConstruirHabitaculo() {
-        v.tipoCarroceria = new Carroceria();
-        v.tipoCarroceria.tipoCarroceria = "monovolumen";
-        v.color = "plata cromado";
-        v.tipoCarroceria.habitaculoReforzado = true;
-        v.tipoCarroceria.material = "fibra de carbono";
-        
-        
+        v.setTipoCarroceria( new Carroceria());
+        v.getTipoCarroceria().setTipoCarroceria("monovolumen");
+        v.setColor("plata cromado");
+        v.getTipoCarroceria().setHabitaculoReforzado(true);
+        v.getTipoCarroceria().setMaterial("fibra de carbono") ;    
     }
 
     public void ConstuirMotor() {
-        v.motor = new MotorDiesel();
+        v.setMotor(new MotorDiesel());
     }
 
     public void DefinirExtras() {
-        v.direccionAsistida = true;
+        v.setDireccionAsistida(true);
     }
 }

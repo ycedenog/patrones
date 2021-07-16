@@ -11,8 +11,33 @@ package sinpatron;
  */
 public class Carroceria {
 
-    public boolean habitaculoReforzado;
-    public String tipoCarroceria;
-    public String material;
+    protected boolean habitaculoReforzado;
+    protected String tipoCarroceria;
+    protected String material;
+
+    public boolean isHabitaculoReforzado() {
+        return habitaculoReforzado;
+    }
+
+    public void setHabitaculoReforzado(boolean habitaculoReforzado) {
+        this.habitaculoReforzado = habitaculoReforzado;
+    }
+
+    public String getTipoCarroceria() {
+        return tipoCarroceria;
+    }
+
+    public void setTipoCarroceria(String tipoCarroceria) {
+        this.tipoCarroceria = tipoCarroceria;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+    
     
 }
